@@ -47,7 +47,7 @@ const startStopwatch = () => {
         }
     }, 60 * 1000);
     sec = setInterval(() => {
-        if (secCounter === 60) {
+        if (secCounter === 59) {
             secCounter = 0;
         }
         secondEl.innerHTML = `&nbsp;${++secCounter} :`;
