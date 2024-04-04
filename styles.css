@@ -1,67 +1,80 @@
- *{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
 
- body{
+body {
     font-size: 16px;
     width: 100%;
     height: 100vh;
     background-color: black;
     display: flex;
-    justify-content:  center ;
+    justify-content: center;
     align-items: center;
- }
+    width: 100vw;
+    height: 100vh;
+}
+.container-bg{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
 
- .heading{
-    color: white;
+.heading {
+    color:white;
     text-align: center;
     padding: 25px;
     font-size: 30px;
- }
+}
 
- .outer{
+.outer {
     width: 245px;
     height: 245px;
-    border-radius: 50%;
+    border-radius: 75%;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
- }
- .inner{
+}
+
+.inner {
     width: 230px;
     height: 230px;
-    border-radius: 50%;
-    background-color:black;
+    /* border-radius: 50%; */
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    
- }
 
- .text{
+}
+
+.text {
     color: white;
     font-size: 25px;
- }
+}
 
- .minute{
+.minute {
     font-size: 45px;
- }
- .second{
+}
+
+.second {
     font-size: 40px;
- }
- .msec{
+}
+
+.msec {
     font-size: 35px;
- }
- .buttons-container{
+}
+
+.buttons-container {
     width: 250px;
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
- }
- .button{
+}
+
+.button {
     width: 60px;
     color: white;
     border-radius: 50%;
@@ -69,14 +82,25 @@
     background-color: black;
     border: 3px solid white;
     cursor: pointer;
- }
+}
 
- .button:hover{
+/* .btn-outer{
+    width: 70px;
+    border-radius: 75%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.button:hover {
     background-color: white;
     color: black;
- }
+    background: linear-gradient(-45deg, violet, yellow, green, indigo, orange, blue, red);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
 
- .laps{
+.laps {
     list-style: none;
     color: white;
     height: 250px;
@@ -84,12 +108,13 @@
     position: relative;
     margin-top: 30px;
     width: 250px;
- }
+}
 
- .laps::-webkit-scrollbar{
+.laps::-webkit-scrollbar {
     display: none;
- }
-.lap-item{
+}
+
+.lap-item {
     display: inline-block;
     width: 100%;
     padding: 10px;
@@ -97,18 +122,19 @@
     text-align: center;
     border-radius: 50px;
     margin-bottom: 15px;
-    
+
 }
 
- .number{
+.number {
     color: grey;
- }
- .time-stamp{
-    display: inline-block;
-    margin-left:25px ;
- }
+}
 
- .lap-clear-btn{
+.time-stamp {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lap-clear-btn {
     position: fixed;
     display: block;
     z-index: 1000;
@@ -116,32 +142,83 @@
     left: 50%;
     transform: translate(-50%);
     width: 130px;
-    padding: 10px ;
+    padding: 10px;
     border-radius: 50px;
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.833);
     cursor: pointer;
- }
+}
 
- .hidden{
+.hidden {
     visibility: hidden;
- }
- .animation-bg{
-    background: linear-gradient(-45deg, violet,yellow,green,indigo,orange,blue,red);
+}
+
+.animation-bg {
+    background: linear-gradient(-45deg, violet, yellow, green, indigo, orange, blue, red);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
- }
- @keyframes gradient{
-    0%{
+}
+
+@keyframes gradient {
+    0% {
         background-position: 0% 25%;
     }
-    25%{
+
+    25% {
         background-position: 25% 50%;
     }
-    50%{
+
+    50% {
         background-position: 50% 75%;
     }
-    100%{
+
+    100% {
         background-position: 75% 100%;
     }
- }
+}
+
+.alarm-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.input-item {
+    /* display: inline-block; */
+    width: 50%;
+    height: 50px;
+    /* padding: 10px; */
+    border: 2px solid white;
+    text-align: center;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    color: white;
+    background-color: black;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alarm-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
