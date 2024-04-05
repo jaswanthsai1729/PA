@@ -84,6 +84,9 @@ const play = () => {
 const reset = () => {
     isReset = true;
     play();
+    minuteCounter = 0;
+    secCounter = 0;
+    msecCounter = 0;
     lapbutton.classList.add("hidden");
     resetbutton.classList.add("hidden");
     minuteEl.innerHTML = "00 :";
